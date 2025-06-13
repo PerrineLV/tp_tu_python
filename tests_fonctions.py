@@ -53,3 +53,10 @@ class TestFonctions(unittest.TestCase):
     def test_calculer_moyenne_une_note(self):
         notes = [18]
         self.assertEqual(calculer_moyenne(notes), 18)
+
+    # conversion temperature
+    def test_convertir_temperature_zero(self):
+        self.assertEqual(convertir_temperature(0), 32)
+
+    def test_convertir_temperature_eau_bouillante(self):
+        self.assertEqual(convertir_temperature(100), 212)

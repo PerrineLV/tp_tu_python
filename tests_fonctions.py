@@ -60,3 +60,12 @@ class TestFonctions(unittest.TestCase):
 
     def test_convertir_temperature_eau_bouillante(self):
         self.assertEqual(convertir_temperature(100), 212)
+
+    # division
+    def test_diviser_cas_valide(self):
+        resultat = diviser(10, 2)
+        self.assertEqual(resultat, 5)
+
+    def test_diviser_cas_zero(self):
+        with self.assertRaises(ValueError):
+            diviser(10, 0)

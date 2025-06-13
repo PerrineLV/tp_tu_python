@@ -24,3 +24,8 @@ def convertir_temperature(celsius):
     """Convertit une température de Celsius à Fahrenheit."""
     return (celsius * 9/5) + 32
 
+def diviser(a, b):
+    """Retourne le résultat de la division de a par b."""
+    if b == 0:
+        raise ValueError("Division par zéro n'est pas permise.")
+    return a / b

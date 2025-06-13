@@ -69,3 +69,16 @@ class TestFonctions(unittest.TestCase):
     def test_diviser_cas_zero(self):
         with self.assertRaises(ValueError):
             diviser(10, 0)
+
+    # mot de passe
+    def test_valider_mot_de_passe_cas_valide(self):
+        self.assertTrue(mot_de_passe("Valid123!"))
+
+    def test_valider_mot_de_passe_cas_trop_court(self):
+        self.assertFalse(mot_de_passe("Short1!"))
+
+    def test_valider_mot_de_passe_cas_sans_chiffre(self):
+        self.assertFalse(mot_de_passe("NoNumber!"))
+
+    def test_valider_mot_de_passe_cas_sans_lettre(self):
+        self.assertFalse(mot_de_passe("12345678!"))

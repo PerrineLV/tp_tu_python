@@ -29,3 +29,13 @@ def diviser(a, b):
     if b == 0:
         raise ValueError("Division par zéro n'est pas permise.")
     return a / b
+
+def mot_de_passe(password):
+    """Valide un mot de passe basique."""
+    if len(password) < 8:
+        return False
+    if not any(char.isdigit() for char in password):
+        return False
+    if not any(char.isalpha() for char in password):
+        return False
+    return True

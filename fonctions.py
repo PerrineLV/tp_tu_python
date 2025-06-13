@@ -31,11 +31,11 @@ def diviser(a, b):
     return a / b
 
 def mot_de_passe(password):
-    """Valide un mot de passe basique."""
+    """Valide un mot de passe basique avec exceptions."""
     if len(password) < 8:
-        return False
+        raise ValueError("Le mot de passe doit contenir au moins 8 caractères.")
     if not any(char.isdigit() for char in password):
-        return False
+        raise ValueError("Le mot de passe doit contenir au moins un chiffre.")
     if not any(char.isalpha() for char in password):
-        return False
+        raise ValueError("Le mot de passe doit contenir au moins une lettre.")
     return True

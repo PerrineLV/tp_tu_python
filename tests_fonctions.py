@@ -12,6 +12,10 @@ class TestFonctions(unittest.TestCase):
         resultat = additionner(-2, -3)
         self.assertEqual(resultat, -5)
 
+    def test_addition_cas_mixte(self):
+        resultat = additionner(2, -3)
+        self.assertEqual(resultat, -1)
+
     def test_addition_cas_zero(self):
         resultat = additionner(0, 0)
         self.assertEqual(resultat, 0)    

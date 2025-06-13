@@ -24,3 +24,12 @@ class TestFonctions(unittest.TestCase):
 
     def test_est_pair_cas_zero(self):
         self.assertTrue(est_pair(0))
+
+    def test_valider_email_cas_valide(self):
+        self.assertTrue(valider_email("test@example.com"))
+
+    def test_valider_email_cas_invalide_sans_arobase(self):
+        self.assertFalse(valider_email("testexample.com"))
+        
+    def test_valider_email_cas_invalide_sans_point(self):
+        self.assertFalse(valider_email("test@examplecom"))
